@@ -15,7 +15,7 @@
 ## Software Architecure
 The software architecture for the robot code is fairly simple. The client side will enter the public/local ip address of the robot. The client will then perform 1 ping to check if the ip is online, if not it will ask for the ip again. If the ip is online it will attempt to connect to the robot using the python socket module. Once it connects to the server it can send commands for speed and movement.
 
-![](https://github.com/kincho4/Robot/tree/master/images/diagram.png)
+![](https://raw.githubusercontent.com/kincho4/Robot/master/images/diagram.png)
 
 ## Client installation
 ### Windows
