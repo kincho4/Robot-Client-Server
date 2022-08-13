@@ -63,6 +63,8 @@ def press_on(key):
             motor_move("a")
         elif key.char == ("d"):
             motor_move("d")
+        elif key.char == ("q"):
+            motor_move("q")
         else:
             pass
     else:
