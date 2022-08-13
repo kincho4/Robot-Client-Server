@@ -56,22 +56,12 @@ def handle_client(conn, addr):
                 GPIO.output(in2,GPIO.LOW)
                 GPIO.output(in3,GPIO.LOW)
                 GPIO.output(in4,GPIO.HIGH)
-                time.sleep(1)
-                GPIO.output(in1,GPIO.LOW)
-                GPIO.output(in2,GPIO.LOW)
-                GPIO.output(in3,GPIO.LOW)
-                GPIO.output(in4,GPIO.LOW)
 
             elif msg == "s":
                 print("s")
                 GPIO.output(in1,GPIO.LOW)
                 GPIO.output(in2,GPIO.HIGH)
                 GPIO.output(in3,GPIO.HIGH)
-                GPIO.output(in4,GPIO.LOW)
-                time.sleep(1)
-                GPIO.output(in1,GPIO.LOW)
-                GPIO.output(in2,GPIO.LOW)
-                GPIO.output(in3,GPIO.LOW)
                 GPIO.output(in4,GPIO.LOW)
 
             elif msg == "a":
@@ -80,11 +70,6 @@ def handle_client(conn, addr):
                 GPIO.output(in2,GPIO.LOW)
                 GPIO.output(in3,GPIO.HIGH)
                 GPIO.output(in4,GPIO.LOW)
-                time.sleep(1)
-                GPIO.output(in1,GPIO.LOW)
-                GPIO.output(in2,GPIO.LOW)
-                GPIO.output(in3,GPIO.LOW)
-                GPIO.output(in4,GPIO.LOW)
 
             elif msg == "d":
                 print("d")
@@ -92,7 +77,9 @@ def handle_client(conn, addr):
                 GPIO.output(in2,GPIO.LOW)
                 GPIO.output(in3,GPIO.LOW)
                 GPIO.output(in4,GPIO.LOW)
-                time.sleep(1)
+
+            elif msg == "q":
+                print("q")
                 GPIO.output(in1,GPIO.LOW)
                 GPIO.output(in2,GPIO.LOW)
                 GPIO.output(in3,GPIO.LOW)
