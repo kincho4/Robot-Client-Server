@@ -1,16 +1,15 @@
-import RPi.GPIO as gp
+from time import time
+import RPi.GPIO as GPIO
 import socket
 import threading
 
 in1 = 24
 in2 = 23
 enA = 25
-dir1 = 1
 
 in3 = 17
 in4 = 27
 enB = 22
-dir2 = 1
 
 GPIO.setmode(GPIO.BCM)
 
@@ -55,9 +54,9 @@ def handle_client(conn, addr):
                 print("w")
                 GPIO.output(in1,GPIO.HIGH)
                 GPIO.output(in2,GPIO.LOW)
-                GPIO.output(in3,GPIO.HIGH)
-                GPIO.output(in4,GPIO.LOW)
-
+                GPIO.output(in3,GPIO.LOW)
+                GPIO.output(in4,GPIO.HIGH)
+                time.sleep(1)
                 GPIO.output(in1,GPIO.LOW)
                 GPIO.output(in2,GPIO.LOW)
                 GPIO.output(in3,GPIO.LOW)
@@ -67,9 +66,9 @@ def handle_client(conn, addr):
                 print("s")
                 GPIO.output(in1,GPIO.LOW)
                 GPIO.output(in2,GPIO.HIGH)
-                GPIO.output(in3,GPIO.LOW)
-                GPIO.output(in4,GPIO.HIGH)
-
+                GPIO.output(in3,GPIO.HIGH)
+                GPIO.output(in4,GPIO.LOW)
+                time.sleep(1)
                 GPIO.output(in1,GPIO.LOW)
                 GPIO.output(in2,GPIO.LOW)
                 GPIO.output(in3,GPIO.LOW)
@@ -81,7 +80,7 @@ def handle_client(conn, addr):
                 GPIO.output(in2,GPIO.LOW)
                 GPIO.output(in3,GPIO.HIGH)
                 GPIO.output(in4,GPIO.LOW)
-
+                time.sleep(1)
                 GPIO.output(in1,GPIO.LOW)
                 GPIO.output(in2,GPIO.LOW)
                 GPIO.output(in3,GPIO.LOW)
@@ -93,25 +92,11 @@ def handle_client(conn, addr):
                 GPIO.output(in2,GPIO.LOW)
                 GPIO.output(in3,GPIO.LOW)
                 GPIO.output(in4,GPIO.LOW)
-
+                time.sleep(1)
                 GPIO.output(in1,GPIO.LOW)
                 GPIO.output(in2,GPIO.LOW)
                 GPIO.output(in3,GPIO.LOW)
                 GPIO.output(in4,GPIO.LOW)
-
-            elif msg == "l":
-                print("l")
-                pA.ChangeDutyCycle(25)
-                pB.ChangeDutyCycle(25)
-            elif msg == "m":
-                print("m")
-                pA.ChangeDutyCycle(50)
-                pB.ChangeDutyCycle(50)
-            elif msg == "h":
-                print("h")
-                pA.ChangeDutyCycle(75)
-                pB.ChangeDutyCycle(75)
-
             else:
                 pass
             if msg == DISCONNECT_MESSAGE:

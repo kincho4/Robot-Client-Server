@@ -54,7 +54,7 @@ def motor_move(direction):
 def press_on(key):
     if hasattr(key, "char"):
         if key.char == ("h"):
-            print("\n**Controls**:\nh - Shows this menu\nw - Moves robot forwards\ns - Moves robot backwards\na - Turns the robot to the left\nd - Turns the robot to the right\nl - Low speed\nm - Medium speed\nesc - quits this program\n")
+            print("\n**Controls**:\nh - Shows this menu\nw - Moves robot forwards\ns - Moves robot backwards\na - Turns the robot to the left\nd - Turns the robot to the right\nesc - quits this program\n")
         elif key.char == ("w"):
             motor_move("w")
         elif key.char == ("s"):
