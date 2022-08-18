@@ -5,36 +5,36 @@ import threading
 
 in1 = 24
 in2 = 23
-enA = 25
+#enA = 25
 
 in3 = 17
 in4 = 27
-enB = 22
+#enB = 22
 
-p1=GPIO.PWM(enA,1000)
-p2=GPIO.PWM(enB,1000)
-p1.start(75)
-p2.start(75)
+#p1=GPIO.PWM(enA,1000)
+#p2=GPIO.PWM(enB,1000)
+#p1.start(75)
+#p2.start(75)
 
 GPIO.setmode(GPIO.BCM)
 
 GPIO.setup(in1,GPIO.OUT)
 GPIO.setup(in2,GPIO.OUT)
-GPIO.setup(enA,GPIO.OUT)
+#GPIO.setup(enA,GPIO.OUT)
 GPIO.output(in1,GPIO.LOW)
 GPIO.output(in2,GPIO.LOW)
 
 GPIO.setup(in3,GPIO.OUT)
 GPIO.setup(in4,GPIO.OUT)
-GPIO.setup(enB,GPIO.OUT)
+#GPIO.setup(enB,GPIO.OUT)
 GPIO.output(in3,GPIO.LOW)
 GPIO.output(in4,GPIO.LOW)
 
-pA=GPIO.PWM(enA,1000)
-pB=GPIO.PWM(enB,1000)
+#pA=GPIO.PWM(enA,1000)
+#pB=GPIO.PWM(enB,1000)
 
-pA.start(25)
-pB.start(25)
+#pA.start(25)
+#pB.start(25)
 
 HEADER = 64
 PORT = 5050
