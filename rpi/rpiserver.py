@@ -11,6 +11,11 @@ in3 = 17
 in4 = 27
 enB = 22
 
+p1=GPIO.PWM(enA,1000)
+p2=GPIO.PWM(enB,1000)
+p1.start(75)
+p2.start(75)
+
 GPIO.setmode(GPIO.BCM)
 
 GPIO.setup(in1,GPIO.OUT)
