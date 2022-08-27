@@ -72,13 +72,13 @@ def handle_client(conn, addr):
                 print("a")
                 GPIO.output(in1,GPIO.HIGH)
                 GPIO.output(in2,GPIO.LOW)
-                GPIO.output(in3,GPIO.LOW)
+                GPIO.output(in3,GPIO.HIGH)
                 GPIO.output(in4,GPIO.LOW)
 
             elif msg == "d":
                 print("d")
                 GPIO.output(in1,GPIO.LOW)
-                GPIO.output(in2,GPIO.LOW)
+                GPIO.output(in2,GPIO.HIGH)
                 GPIO.output(in3,GPIO.LOW)
                 GPIO.output(in4,GPIO.HIGH)
 
