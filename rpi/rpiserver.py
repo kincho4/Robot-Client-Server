@@ -5,10 +5,11 @@ import threading
 in1 = 24
 in2 = 23
 #enA = 25
-
 in3 = 17
 in4 = 27
 #enB = 22
+ledf = 5
+ledb = 6
 
 #p1=GPIO.PWM(enA,1000)
 #p2=GPIO.PWM(enB,1000)
@@ -29,6 +30,8 @@ GPIO.setup(in4,GPIO.OUT)
 GPIO.output(in3,GPIO.LOW)
 GPIO.output(in4,GPIO.LOW)
 
+GPIO.setup(ledf, GPIO.OUT)
+GPIO.setup(ledb, GPIO.OUT)
 #pA=GPIO.PWM(enA,1000)
 #pB=GPIO.PWM(enB,1000)
 
@@ -81,6 +84,18 @@ def handle_client(conn, addr):
                 GPIO.output(in2,GPIO.HIGH)
                 GPIO.output(in3,GPIO.LOW)
                 GPIO.output(in4,GPIO.HIGH)
+
+            elif msg == "i":
+                GPIO.output(ledf, GPIO.HIGH)
+
+            elif msg == "o":
+                GPIO.output(ledb, GPIO.HIGH)
+
+            elif msg == "j":
+                GPIO.output(ledf, GPIO.LOW)
+
+            elif msg == "k":
+                GPIO.output(ledb, GPIO.LOW)
 
             elif msg == "q":
                 print("q")
