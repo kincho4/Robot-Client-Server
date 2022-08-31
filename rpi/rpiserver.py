@@ -40,7 +40,7 @@ GPIO.setup(ledb, GPIO.OUT)
 
 HEADER = 64
 PORT = 5050
-SERVER = socket.gethostbyname(socket.gethostname())
+SERVER = socket.gethostbyname("IP HERE")
 ADDR = (SERVER, PORT)
 FORMAT = "utf-8"
 DISCONNECT_MESSAGE = "!DISCONNECT"
@@ -75,13 +75,13 @@ def handle_client(conn, addr):
                 print("a")
                 GPIO.output(in1,GPIO.HIGH)
                 GPIO.output(in2,GPIO.LOW)
-                GPIO.output(in3,GPIO.HIGH)
+                GPIO.output(in3,GPIO.LOW)
                 GPIO.output(in4,GPIO.LOW)
 
             elif msg == "d":
                 print("d")
                 GPIO.output(in1,GPIO.LOW)
-                GPIO.output(in2,GPIO.HIGH)
+                GPIO.output(in2,GPIO.LOW)
                 GPIO.output(in3,GPIO.LOW)
                 GPIO.output(in4,GPIO.HIGH)
 
